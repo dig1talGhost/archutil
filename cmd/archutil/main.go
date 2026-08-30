@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	mainTitle = "d󰣇rkmatter 󱡕"
+	mainTitle = "Archutil 󰣇"
 	version   = "dev"
 )
 
