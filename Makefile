@@ -1,10 +1,12 @@
-.PHONY: build install clean bump-version
+o.PHONY: help build install maintenance clean bump-version
 
 BINARY_NAME := archutil
 GO := go
 GOFLAGS := -v
-VERSION ?= $(shell cat .version 2>/dev/null || echo "latest")
+VERSION ?= $(shell cat .version/latest 2>/dev/null || echo "latest")
 BUILD_DIR := ./bin
+MODULE_MAINTENANCE_SCRIPT := ./scripts/maintenance.sh
+CLEANUP_SCRIPT := ./scripts/cleanup.sh
 
 help:
 	clear;
@@ -24,9 +26,12 @@ install:
 	@echo ":: Installing $(BINARY_NAME)..."
 	$(GO) install $(GOFLAGS) -ldflags="-X main.version=$(VERSION)" ./cmd/$(BINARY_NAME)
 
+maintenance:
+	@bash -c $(MODULE_MAINTENANCE_SCRIPT)
+
 clean:
 	@echo ":: Cleaning build artifacts..."
-	rm -rf $(BUILD_DIR)
+	@bash -c $(CLEANUP_SCRIPT)
 
 bump-version:
 	@read -p "Enter new version (current: $(shell cat .version 2>/dev/null || echo latest)): " NEW_VERSION; \
