@@ -3,7 +3,7 @@ o.PHONY: help build install maintenance clean bump-version
 BINARY_NAME := archutil
 GO := go
 GOFLAGS := -v
-VERSION ?= $(shell cat .version/latest 2>/dev/null || echo "latest")
+VERSION ?= $(shell cat .version 2>/dev/null || echo "latest")
 BUILD_DIR := ./bin
 MODULE_MAINTENANCE_SCRIPT := ./scripts/maintenance.sh
 CLEANUP_SCRIPT := ./scripts/cleanup.sh

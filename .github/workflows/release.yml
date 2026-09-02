@@ -30,7 +30,7 @@ jobs:
       - name: Read version file
         id: get_version
         run: |
-          VERSION=$(cat .version/latest)
+          VERSION=$(cat .version)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "tag=v$VERSION" >> $GITHUB_OUTPUT
 
