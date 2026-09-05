@@ -222,6 +222,7 @@ func (m model) View() tea.View {
 		b.WriteString("  Saving to ~/Downloads\n")
 	}
 
+	tea.ClearScreen()
 	return tea.NewView(b.String())
 }
 

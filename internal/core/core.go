@@ -12,6 +12,7 @@ import (
 	"github.com/dig1talGhost/archutil/internal/logger"
 	"github.com/dig1talGhost/archutil/internal/password_generator"
 	"github.com/dig1talGhost/archutil/internal/styles"
+	"github.com/dig1talGhost/archutil/internal/terminal"
 )
 
 func Menu() {
@@ -58,5 +59,7 @@ func Menu() {
 
 		fmt.Print("\nPress Enter to return to the menu...")
 		fmt.Scanln()
+
+		terminal.ClearScreen()
 	}
 }

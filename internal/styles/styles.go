@@ -4,10 +4,14 @@ import "charm.land/lipgloss/v2"
 
 var CommonStyle = lipgloss.NewStyle().
 	Bold(true).
-	Foreground(lipgloss.Color("#7b00ff"))
+	Foreground(lipgloss.Color("#02BA84"))
 
 var LegendStyle = lipgloss.NewStyle().
 	Bold(false).
+	Foreground(lipgloss.Color("#A7A7A7"))
+
+var LegendStyleBold = lipgloss.NewStyle().
+	Bold(true).
 	Foreground(lipgloss.Color("#A7A7A7"))
 
 var HeaderStyle = lipgloss.NewStyle().
@@ -28,3 +32,7 @@ var TreeChildStyle = lipgloss.NewStyle().
 var HttpChildStyle = lipgloss.NewStyle().
 	Bold(true).
 	Foreground(lipgloss.Color("#02BA84"))
+
+var ErrorStyle = lipgloss.NewStyle().
+	Bold(true).
+	Foreground(lipgloss.Color("#C82631"))

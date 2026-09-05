@@ -36,7 +36,7 @@ func Pager() {
 		glyphOptions[i] = huh.NewOption(title, g)
 	}
 
-	theme := huh.ThemeCharm()
+	theme := huh.ThemeCatppuccin()
 	theme.Focused.Base.Border(lipgloss.HiddenBorder())
 
 	_ = huh.NewForm(
@@ -53,4 +53,6 @@ func Pager() {
 
 	termenv.Copy(selected.Icon)
 	fmt.Println(selected.Icon)
+
+	termenv.DefaultOutput().ClearScreen()
 }

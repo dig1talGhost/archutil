@@ -4,15 +4,11 @@ import (
 	"crypto/rand"
 	"fmt"
 	"math/big"
-	"os"
 
 	"charm.land/lipgloss/v2"
-)
 
-var (
-	simpleStyle = lipgloss.NewStyle().
-		Bold(true).
-		Foreground(lipgloss.Color("#ff004c"))
+	"github.com/dig1talGhost/archutil/internal/styles"
+	"github.com/dig1talGhost/archutil/internal/terminal"
 )
 
 const defaultChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
@@ -37,7 +33,8 @@ func Gen() {
 	password, err := generatePassword(passwordLength, defaultChars)
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "Failed to generate password:", err)
+		fmt.Println()
+		lipgloss.Println(styles.ErrorStyle.Render("Error:"), "Oops, something went wrong...")
 		return
 	}
 
@@ -48,5 +45,8 @@ func Gen() {
 		}
 	}()
 
-	lipgloss.Println(simpleStyle.Render(string(password)))
+	terminal.ClearScreen()
+
+	fmt.Println()
+	lipgloss.Println(styles.LegendStyleBold.Render("Password:"), styles.CommonStyle.Render(string(password)))
 }
