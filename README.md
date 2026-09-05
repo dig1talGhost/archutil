@@ -10,8 +10,8 @@ the [releases page](https://github.com/dig1talGhost/archutil/releases), so you c
 
 #### Using curl:
 ```bash
-curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.3/archutil-v0.0.3-linux-amd64"
-curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.3/sha512sum.txt"
+curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.4/archutil-v0.0.4-linux-amd64"
+curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.4/sha512sum.txt"
 ```
 Verify your download:
 ```bash
@@ -20,13 +20,13 @@ sha512sum -c sha512sum.txt
 
 Here's what the output should look like:
 ```
-archutil-v0.0.3-linux-amd64: OK
+archutil-v0.0.4-linux-amd64: OK
 ```
 
 Then, make sure the binary is located anywhere on your `$PATH` and make it executable. \
 In this example, we assume you have `$GOBIN` set to `~/go/bin`
 ```bash
-mv archutil-v0.0.3-linux-amd64 "$GOBIN/archutil"
+mv archutil-v0.0.4-linux-amd64 "$GOBIN/archutil"
 chmod +x "$GOBIN/archutil"
 ```
 
