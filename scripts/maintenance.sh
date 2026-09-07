@@ -11,9 +11,7 @@ function check_license() {
 
 	go-licenses check ./... \
 		--disallowed_types=forbidden,restricted \
-		--ignore=golang.org/x/sys
-
-	echo ":: Done."
+		--ignore=golang.org/x/sys && echo ":: Done."
 	echo ""
 }
 
