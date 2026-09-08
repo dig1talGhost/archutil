@@ -1,222 +1,242 @@
 [
-  {
-    "name": "Arch Linux",
-    "icon": "󰣇 "
-  },
-  {
-    "name": "hyprland",
-    "icon": " "
-  },
-  {
-    "name": "Ghost",
-    "icon": "󰧵 "
-  },
-  {
-    "name": "Toggle switch",
-    "icon": "󰔡 "
-  },
-  {
-    "name": "no1",
-    "icon": "󰇤 "
-  },
-  {
-    "name": "Github",
-    "icon": " "
-  },
-  {
-    "name": "Digital Key",
-    "icon": "󰷖 "
-  },
-  {
-    "name": "Lightning",
-    "icon": "󰉁"
-  },
-  {
-    "name": "Code",
-    "icon": "󰗀 "
-  },
-  {
-    "name": "Secure",
-    "icon": "󰦝 "
-  },
-  {
-    "name": "Infinity",
-    "icon": "∞"
-  },
-  {
-    "name": "Heart",
-    "icon": "♡ "
-  },
-  {
-    "name": "Checkmark",
-    "icon": "✓"
-  },
-  {
-    "name": "Crossmark",
-    "icon": "✕"
-  },
-  {
-    "name": "Ellipsis",
-    "icon": "⋯"
-  },
-  {
-    "name": "Vertical Ellipsis",
-    "icon": "⋮"
-  },
-  {
-    "name": "Arrow Up",
-    "icon": "↑"
-  },
-  {
-    "name": "Arrow Right",
-    "icon": "→"
-  },
-  {
-    "name": "Arrow Down",
-    "icon": "↓"
-  },
-  {
-    "name": "Arrow Left",
-    "icon": "←"
-  },
-  {
-    "name": "Arrow Top-Right",
-    "icon": "↗︎"
-  },
-  {
-    "name": "Arrow Bottom-Right",
-    "icon": "↘"
-  },
-  {
-    "name": "Arrow Bottom-Left",
-    "icon": "↙"
-  },
-  {
-    "name": "Arrow Top-Left",
-    "icon": "↖"
-  },
-  {
-    "name": "Arrow Counter-Clockwise",
-    "icon": "↺"
-  },
-  {
-    "name": "Arrow Clockwise",
-    "icon": "↻"
-  },
-  {
-    "name": "Bullet Filled",
-    "icon": "•"
-  },
-  {
-    "name": "Bullet Empty",
-    "icon": "◦"
-  },
-  {
-    "name": "Star Filled",
-    "icon": "★"
-  },
-  {
-    "name": "Star Empty",
-    "icon": "☆"
-  },
-  {
-    "name": "Star",
-    "icon": "✢"
-  },
-  {
-    "name": "Sparkle Filled",
-    "icon": "✦"
-  },
-  {
-    "name": "Sparkle Empty",
-    "icon": "✧"
-  },
-  {
-    "name": "Diamond",
-    "icon": "❖"
-  },
-  {
-    "name": "Asterisk",
-    "icon": "✱"
-  },
-  {
-    "name": "Flower",
-    "icon": "✿"
-  },
-  {
-    "name": "Sun",
-    "icon": "☼"
-  },
-  {
-    "name": "Snowflake",
-    "icon": "❄"
-  },
-  {
-    "name": "Moon",
-    "icon": "󰤄 "
-  },
-  {
-    "name": "Star",
-    "icon": "⁜"
-  },
-  {
-    "name": "Circle Filled",
-    "icon": "●"
-  },
-  {
-    "name": "Circle Empty",
-    "icon": "○"
-  },
-  {
-    "name": "Copyright",
-    "icon": "©"
-  },
-  {
-    "name": "Trademark",
-    "icon": "®"
-  },
-  {
-    "name": "Horizontal Lines",
-    "icon": "☰"
-  },
-  {
-    "name": "Bitcoin",
-    "icon": "₿"
-  },
-  {
-    "name": "Diamond Filled",
-    "icon": "♦"
-  },
-  {
-    "name": "Diamond Empty",
-    "icon": "♢"
-  },
-  {
-    "name": "Yin-yang",
-    "icon": "☯"
-  },
-  {
-    "name": "Peace",
-    "icon": "☮"
-  },
-  {
-    "name": "Quote Close",
-    "icon": "❞"
-  },
-  {
-    "name": "Flag",
-    "icon": "⚐"
-  },
-  {
-    "name": "Hourglass",
-    "icon": "ⴵ"
-  },
-  {
-    "name": "Water opacity",
-    "icon": "󱡕"
-  },
-  {
-    "name": "At symbol",
-    "icon": "󰁥 "
-  }
+	{
+		"name": "Arch Linux",
+		"icon": "󰣇 "
+	},
+	{
+		"name": "hyprland",
+		"icon": " "
+	},
+	{
+		"name": "Bash",
+		"icon": ""
+	},
+	{
+		"name": "Ghost",
+		"icon": "󰊠"
+	},
+	{
+		"name": "No ghost",
+		"icon": "󰧵 "
+	},
+	{
+		"name": "Alien",
+		"icon": "󱃋"
+	},
+	{
+		"name": "?",
+		"icon": ""
+	},
+	{
+		"name": "Spaceship",
+		"icon": "󱃅 "
+	},
+	{
+		"name": "Toggle switch",
+		"icon": "󰔡 "
+	},
+	{
+		"name": "no1",
+		"icon": "󰇤 "
+	},
+	{
+		"name": "Github",
+		"icon": " "
+	},
+	{
+		"name": "Digital Key",
+		"icon": "󰷖 "
+	},
+	{
+		"name": "Lightning",
+		"icon": "󰉁"
+	},
+	{
+		"name": "Code",
+		"icon": "󰗀 "
+	},
+	{
+		"name": "Secure",
+		"icon": "󰦝 "
+	},
+	{
+		"name": "Infinity",
+		"icon": "∞"
+	},
+	{
+		"name": "Chart",
+		"icon": "󱕍"
+	},
+	{
+		"name": "Checkmark",
+		"icon": "✓"
+	},
+	{
+		"name": "Crossmark",
+		"icon": "✕"
+	},
+	{
+		"name": "Bullet Filled",
+		"icon": "•"
+	},
+	{
+		"name": "Bullet Empty",
+		"icon": "◦"
+	},
+	{
+		"name": "Star Filled",
+		"icon": "★"
+	},
+	{
+		"name": "Star Empty",
+		"icon": "☆"
+	},
+	{
+		"name": "Star",
+		"icon": "✢"
+	},
+	{
+		"name": "Sparkle Filled",
+		"icon": "✦"
+	},
+	{
+		"name": "Sparkle Empty",
+		"icon": "✧"
+	},
+	{
+		"name": "Diamond",
+		"icon": "❖"
+	},
+	{
+		"name": "Asterisk",
+		"icon": "✱"
+	},
+	{
+		"name": "Sun",
+		"icon": "☼"
+	},
+	{
+		"name": "Snowflake",
+		"icon": "❄"
+	},
+	{
+		"name": "Moon",
+		"icon": "󰤄 "
+	},
+	{
+		"name": "Star",
+		"icon": "⁜"
+	},
+	{
+		"name": "Circle Filled",
+		"icon": "●"
+	},
+	{
+		"name": "Circle Empty",
+		"icon": "○"
+	},
+	{
+		"name": "Copyright",
+		"icon": "©"
+	},
+	{
+		"name": "Trademark",
+		"icon": "®"
+	},
+	{
+		"name": "Horizontal Lines",
+		"icon": "☰"
+	},
+	{
+		"name": "Quote Close",
+		"icon": "❞"
+	},
+	{
+		"name": "Flag",
+		"icon": "⚐"
+	},
+	{
+		"name": "Hourglass",
+		"icon": "ⴵ"
+	},
+	{
+		"name": "Water opacity",
+		"icon": "󱡕"
+	},
+	{
+		"name": "At symbol",
+		"icon": "󰁥 "
+	},
+	{
+		"name": "Web",
+		"icon": " "
+	},
+	{
+		"name": "Moon 2",
+		"icon": " "
+	},
+	{
+		"name": "Moon 3",
+		"icon": " "
+	},
+	{
+		"name": "Moon 4",
+		"icon": "󰽡 "
+	},
+	{
+		"name": "Moon 5",
+		"icon": "󰽣 "
+	},
+	{
+		"name": "Moon 6",
+		"icon": "󰽥 "
+	},
+	{
+		"name": "Moon 7",
+		"icon": "󰽧 "
+	},
+	{
+		"name": "Moon 8",
+		"icon": "󰽦 "
+	},
+	{
+		"name": "Moon 9",
+		"icon": "󰽨 "
+	},
+	{
+		"name": "Moon 10",
+		"icon": " "
+	},
+	{
+		"name": "Moon 11",
+		"icon": " "
+	},
+	{
+		"name": "Moon 12",
+		"icon": " "
+	},
+	{
+		"name": "Moon 13",
+		"icon": "󰽦 "
+	},
+	{
+		"name": "Woosh",
+		"icon": "  "
+	},
+	{
+		"name": "Comet",
+		"icon": "󱖲 "
+	},
+	{
+		"name": "Glitch",
+		"icon": "󱔾 "
+	},
+	{
+		"name": "Moon rise",
+		"icon": " "
+	},
+	{
+		"name": "Go",
+		"icon": "󰟓"
+	}
 ]
