@@ -1,11 +1,27 @@
 [
   {
     "name": "Arch Linux",
-    "icon": "󰣇"
+    "icon": "󰣇 "
+  },
+  {
+    "name": "hyprland",
+    "icon": " "
   },
   {
     "name": "Ghost",
-    "icon": ""
+    "icon": "󰧵 "
+  },
+  {
+    "name": "Toggle switch",
+    "icon": "󰔡 "
+  },
+  {
+    "name": "no1",
+    "icon": "󰇤 "
+  },
+  {
+    "name": "Github",
+    "icon": " "
   },
   {
     "name": "Digital Key",
@@ -29,7 +45,7 @@
   },
   {
     "name": "Heart",
-    "icon": "♡"
+    "icon": "♡ "
   },
   {
     "name": "Checkmark",
@@ -137,7 +153,7 @@
   },
   {
     "name": "Moon",
-    "icon": "󰤄"
+    "icon": "󰤄 "
   },
   {
     "name": "Star",
@@ -201,6 +217,6 @@
   },
   {
     "name": "At symbol",
-    "icon": "󰁥"
+    "icon": "󰁥 "
   }
 ]
