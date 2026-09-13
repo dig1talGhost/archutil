@@ -14,9 +14,10 @@ help:
 	@echo "  make help          - Display this message"
 	@echo "  make build         - Build the binary"
 	@echo "  make install       - Install to GOBIN or GOPATH/bin"
-	@echo "  make bump-version  - Automatic versioning, creates a new version"
+	@echo "  make maintenance   - Run module maintenance script"
 	@echo "  make clean         - Remove build artifacts"
-
+	@echo "  make bump-version  - Automatic versioning, creates a new version"
+	
 build:
 	@echo ":: Building $(BINARY_NAME)..."
 	@mkdir -p $(BUILD_DIR)
