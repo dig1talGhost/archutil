@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/dig1talGhost/archutil/internal/logger"
+	"github.com/dig1talGhost/archutil/logger"
 )
 
 func CheckEnv() {

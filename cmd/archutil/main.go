@@ -8,10 +8,10 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
-	"github.com/dig1talGhost/archutil/internal/core"
-	"github.com/dig1talGhost/archutil/internal/logger"
-	"github.com/dig1talGhost/archutil/internal/styles"
-	"github.com/dig1talGhost/archutil/internal/terminal"
+	"github.com/dig1talGhost/archutil/logger"
+	"github.com/dig1talGhost/archutil/styles"
+	"github.com/dig1talGhost/archutil/terminal"
+	"github.com/dig1talGhost/archutil/tui"
 )
 
 var (
@@ -52,7 +52,7 @@ func main() {
 	terminal.ClearScreen()
 
 	RenderHeader()
-	core.Menu()
+	tui.Menu()
 
 	terminal.ClearScreen()
 	RenderHeader()

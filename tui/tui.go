@@ -1,4 +1,4 @@
-package core
+package tui
 
 import (
 	"fmt"
@@ -6,13 +6,13 @@ import (
 
 	"charm.land/huh/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/dig1talGhost/archutil/internal/getarch"
-	ghosttp "github.com/dig1talGhost/archutil/internal/ghosttp/cmd"
-	"github.com/dig1talGhost/archutil/internal/glyphs"
-	"github.com/dig1talGhost/archutil/internal/logger"
-	"github.com/dig1talGhost/archutil/internal/password_generator"
-	"github.com/dig1talGhost/archutil/internal/styles"
-	"github.com/dig1talGhost/archutil/internal/terminal"
+	"github.com/dig1talGhost/archutil/getarch"
+	ghosttp "github.com/dig1talGhost/archutil/ghosttp/cmd"
+	"github.com/dig1talGhost/archutil/glyphs"
+	"github.com/dig1talGhost/archutil/logger"
+	"github.com/dig1talGhost/archutil/password_generator"
+	"github.com/dig1talGhost/archutil/styles"
+	"github.com/dig1talGhost/archutil/terminal"
 )
 
 func Menu() {

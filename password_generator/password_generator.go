@@ -7,8 +7,8 @@ import (
 
 	"charm.land/lipgloss/v2"
 
-	"github.com/dig1talGhost/archutil/internal/styles"
-	"github.com/dig1talGhost/archutil/internal/terminal"
+	"github.com/dig1talGhost/archutil/styles"
+	"github.com/dig1talGhost/archutil/terminal"
 )
 
 const defaultChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"

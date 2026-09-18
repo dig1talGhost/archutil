@@ -12,8 +12,8 @@ import (
 	"charm.land/huh/v2"
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
-	"github.com/dig1talGhost/archutil/internal/logger"
-	"github.com/dig1talGhost/archutil/internal/styles"
+	"github.com/dig1talGhost/archutil/logger"
+	"github.com/dig1talGhost/archutil/styles"
 )
 
 // HTTP service status message
