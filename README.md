@@ -2,7 +2,7 @@
 Simple TUI application to run linux utilities with style.
 
 > [!NOTE]
-> - This is meant to run on Arch Linux.
+> - This is meant to run on [Arch Linux](https://archlinux.org).
 
 ## Installation
 I recommend you download the latest release's binary and it's `sha512sum.txt` from \
