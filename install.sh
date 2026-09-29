@@ -135,6 +135,7 @@ packages=(
 	"echo"
 	"go"
 	"git"
+	"sha512sum"
 )
 
 for depends in "${packages[@]}"; do
