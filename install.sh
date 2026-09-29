@@ -124,7 +124,7 @@ install_binary() {
 			exit 1
 		fi
 	else
-		logger_error "No write permission to ${install_dir}. Try running with sudo or set GOBIN"
+		logger_error "${install_dir}: permission denied... "
 		exit 1
 	fi
 }
@@ -150,14 +150,14 @@ main() {
 	os=$(detect_os)
 	arch=$(detect_arch)
 
+	project_name="dig1talGhost/archutil"
+	project_version=$(basename "$(curl -s -o /dev/null -w '%{redirect_url}' "https://github.com/${project_name}/releases/latest")")
+
 	echo -e "${BLUE}"
 	echo -e " --------------------"
 	echo -e " ----- Archutil -----"
 	echo -e " --------------------"
 	echo -e "${NC}"
-
-	project_name="dig1talGhost/archutil"
-	project_version=$(basename "$(curl -s -o /dev/null -w '%{redirect_url}' "https://github.com/${project_name}/releases/latest")")
 
 	if [[ -z "${project_version}" ]]; then
 		logger_error "Failed to detect latest version"
