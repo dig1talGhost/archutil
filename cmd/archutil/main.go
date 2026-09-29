@@ -42,13 +42,13 @@ func main() {
 		lipgloss.Println(styles.ErrorStyle.Render("Error:"), "Unsupported operating system detected")
 		os.Exit(1)
 	}
-	terminal.ClearScreen()
 
 	flag.Parse()
 	if *showVersion {
 		lipgloss.Println(styles.CommonStyle.Render(mainTitle), "-", strings.TrimSpace(version))
 		os.Exit(0)
 	}
+	terminal.ClearScreen()
 
 	renderHeader()
 	tui.Menu()

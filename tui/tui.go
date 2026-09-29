@@ -57,9 +57,9 @@ func Menu() {
 			os.Exit(0)
 		}
 
-		terminal.ClearScreen()
-
 		fmt.Print("\nPress Enter to return to the menu...")
 		fmt.Scanln()
+
+		terminal.ClearScreen()
 	}
 }
