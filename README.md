@@ -31,7 +31,7 @@ Deploy a simple HTTP server locally:
 > - To close the server and go back to the main menu, press `CTRL + C`.
 
 ### Getarch
-Quickly download latest archiso and it's signature. \
+Quickly download latest archiso and its signature. \
 By default, download is done via https and the following mirror:
 ```go
 mirror = "https://mirror.quantum5.ca/archlinux/iso/latest/"
@@ -39,7 +39,7 @@ mirror = "https://mirror.quantum5.ca/archlinux/iso/latest/"
 
 Verify your download with `gpg`:
 ```bash
-# The name of the iso and the signsture will be different on your system
+# The name of the iso and the signature will be different on your system
 gpg --verify archlinux.iso.sig archlinux.iso
 ```
 
@@ -76,7 +76,7 @@ Unicode symbols on the command line, built using [`huh?`](https://github.com/cha
 ```
 
 ### Password generator
-Generate a random 16 characters password by default using the follwing characters:
+Generate a random 16 characters password by default using the following characters:
 ```go
 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()
 ```
