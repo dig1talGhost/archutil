@@ -30,8 +30,6 @@ Deploy a simple HTTP server locally:
 > - In your browser, visit `http://localhost:8080/` to access the local server.
 > - To close the server and go back to the main menu, press `CTRL + C`.
 
-<br>
-
 ### Getarch
 Quickly download latest archiso and it's signature. \
 By default, download is done via https and the following mirror:
