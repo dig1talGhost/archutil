@@ -8,9 +8,9 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
-	"github.com/dig1talGhost/archutil/styles"
-	"github.com/dig1talGhost/archutil/terminal"
-	"github.com/dig1talGhost/archutil/tui"
+	"github.com/dig1talGhost/archutil/internal/styles"
+	"github.com/dig1talGhost/archutil/internal/terminal"
+	"github.com/dig1talGhost/archutil/internal/tui"
 )
 
 var (
