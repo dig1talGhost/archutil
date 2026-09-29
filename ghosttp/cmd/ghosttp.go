@@ -78,7 +78,8 @@ func Serve() {
 
 	dirPath, err := getWebsitePath()
 	if err != nil {
-		logger.TimeStamped.Fatal("Failed to get directory path")
+		logger.TimeStamped.Error("Failed to get directory path")
+		return
 	}
 
 	fs := http.FileServer(http.Dir(dirPath))

@@ -4,17 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"runtime"
-
-	"github.com/dig1talGhost/archutil/logger"
 )
-
-func CheckEnv() {
-
-	if runtime.GOOS != "linux" {
-		logger.Standard.Fatal("Error:", "unsupported operating system", runtime.GOOS)
-	}
-}
 
 func ClearScreen() {
 

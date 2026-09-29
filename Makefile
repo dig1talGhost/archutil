@@ -1,4 +1,4 @@
-o.PHONY: help build install maintenance clean bump-version
+.PHONY: help build install maintenance clean bump-version
 
 BINARY_NAME := archutil
 GO := go
@@ -39,10 +39,7 @@ bump-version:
 	VERSION_CLEAN=$$(echo "$$NEW_VERSION" | sed 's/^v//'); \
 	FULL_TAG="v$$VERSION_CLEAN"; \
 	echo "$$VERSION_CLEAN" > .version; \
-	echo ":: Updating README.md..."; \
-	sed "s|download/v[^/]*|download/$$FULL_TAG|g" README.md > README.tmp && mv README.tmp README.md; \
-	sed "s|archutil-v.*-linux-amd64|archutil-$$FULL_TAG-linux-amd64|g" README.md > README.tmp && mv README.tmp README.md; \
-	git add .version README.md; \
+	git add .version; \
 	git commit -S -m "chore: bump version to $$FULL_TAG"; \
 	echo ":: Version bumped to $$FULL_TAG"; \
 	echo ":: Don't forget to: git push && git tag $$FULL_TAG && git push --tags"

@@ -5,41 +5,9 @@ Simple TUI application to run linux utilities with style.
 > - This is meant to run on [Arch Linux](https://archlinux.org).
 
 ## Installation
-I recommend you download the latest release's binary and it's `sha512sum.txt` from \
-the [releases page](https://github.com/dig1talGhost/archutil/releases), so you can verify your download.
-
-#### Using curl:
+Use `curl` to download, verify and install the binary:
 ```bash
-curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.6/archutil-v0.0.6-linux-amd64"
-curl -L -O "https://github.com/dig1talGhost/archutil/releases/download/v0.0.6/sha512sum.txt"
-```
-Verify your download:
-```bash
-sha512sum -c sha512sum.txt
-```
-
-Here's what the output should look like:
-```
-archutil-v0.0.6-linux-amd64: OK
-```
-
-Then, make sure the binary is located anywhere on your `$PATH` and make it executable. \
-In this example, we assume you have `$GOBIN` set to `~/go/bin`
-```bash
-mv archutil-v0.0.6-linux-amd64 "$GOBIN/archutil"
-chmod +x "$GOBIN/archutil"
-```
-
-#### Using git:
-Clone the repo in your `~/Downloads` directory:
-```bash
-cd ~/Downloads
-git clone --depth=1 https://github.com/dig1talGhost/archutil.git
-```
-
-Generate the binary using `make` (will be stored in `$GOBIN` or `$GOPATH` by default):
-```bash
-cd archutil && make install
+curl -sfL https://raw.githubusercontent.com/dig1talGhost/archutil/main/install.sh | bash
 ```
 
 ## Usage
@@ -51,11 +19,6 @@ archutil --version
 Initialize TUI:
 ```bash
 archutil
-```
-
-Print `Makefile` help:
-```bash
-make help
 ```
 
 ### Local http server (ghosttp)

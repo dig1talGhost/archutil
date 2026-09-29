@@ -2,20 +2,19 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"os"
+	"runtime"
 	"strings"
 
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
-	"github.com/dig1talGhost/archutil/logger"
 	"github.com/dig1talGhost/archutil/styles"
 	"github.com/dig1talGhost/archutil/terminal"
 	"github.com/dig1talGhost/archutil/tui"
 )
 
 var (
-	mainTitle = "Archutil 󰣇"
+	mainTitle = "󰣇 archutil"
 	version   = "dev"
 )
 
@@ -29,7 +28,7 @@ func makeTree() {
 	lipgloss.Println(t)
 }
 
-func RenderHeader() {
+func renderHeader() {
 
 	lipgloss.Println(styles.HeaderStyle.Render("", mainTitle, ""))
 	makeTree()
@@ -38,22 +37,19 @@ func RenderHeader() {
 func main() {
 
 	showVersion := flag.Bool("version", false, "print current version")
-	flag.Parse()
 
+	if runtime.GOOS != "linux" {
+		lipgloss.Println(styles.ErrorStyle.Render("Error:"), "Unsupported operating system detected")
+		os.Exit(1)
+	}
+	terminal.ClearScreen()
+
+	flag.Parse()
 	if *showVersion {
-		fmt.Println(mainTitle, strings.TrimSpace(version))
+		lipgloss.Println(styles.CommonStyle.Render(mainTitle), "-", strings.TrimSpace(version))
 		os.Exit(0)
 	}
 
-	terminal.CheckEnv()
-	terminal.ClearScreen()
-
-	logger.TimeStamped.Info("Initializing...")
-	terminal.ClearScreen()
-
-	RenderHeader()
+	renderHeader()
 	tui.Menu()
-
-	terminal.ClearScreen()
-	RenderHeader()
 }
