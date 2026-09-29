@@ -134,7 +134,6 @@ packages=(
 	"curl"
 	"echo"
 	"go"
-	"git"
 	"sha512sum"
 )
 
