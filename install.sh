@@ -78,14 +78,14 @@ download_and_verify() {
 	release_url="https://github.com/${project_name}/releases/download/${project_version}/${binary_name_full}"
 	checksum_url="https://github.com/${project_name}/releases/download/${project_version}/${checksum_file}"
 
-	logger_info "   Downloading binary..."
+	logger_info "   Downloading binary        ${BLUE}[...]${NC}"
 
 	if ! curl -sfL -o "${binary_name_full}" "${release_url}"; then
 		logger_error "Failed to download binary"
 		exit 1
 	fi
 
-	logger_info "   Downloading checksum file..."
+	logger_info "   Downloading checksum file ${BLUE}[...]${NC}"
 
 	if ! curl -sfL -o "${checksum_file}" "${checksum_url}"; then
 		logger_warn "Could not download checksum file, skipping verification"
@@ -93,14 +93,14 @@ download_and_verify() {
 	fi
 
 	echo ""
-	logger_info "   Verifying checksum..."
+	logger_info "   Verifying checksum        ${BLUE}[...]${NC}"
 
 	if ! grep "  ${binary_name_full}$" "${checksum_file}" | sha512sum -c - --status; then
 		logger_error "Checksum verification failed"
 		rm -f "${binary_name_full}" "${checksum_file}"
 		exit 1
 	else
-		logger_success "Checksum verification ✓"
+		logger_success "Checksum passed           ${GREEN}[ ✓ ]${NC}"
 	fi
 
 	return 0
@@ -164,12 +164,12 @@ main() {
 		exit 1
 	fi
 
-	logger_info "   System          :: ${os}"
-	logger_info "   Architecture    :: ${arch}"
+	logger_info "   System                    :: ${os}"
+	logger_info "   Architecture              :: ${arch}"
 	echo ""
 
-	logger_info "   Project Repo    :: ${project_name}"
-	logger_info "   Project Version :: ${project_version}"
+	logger_info "   Project Repository        :: ${project_name}"
+	logger_info "   Project Version           :: ${project_version}"
 
 	detect_install_dir
 	echo ""
@@ -178,7 +178,7 @@ main() {
 	install_binary
 
 	echo ""
-	logger_success "Installation complete ✓"
-	logger_success "No errors were reported ✓"
+	logger_success "Installation complete     ${GREEN}[ ✓ ]${NC}"
+	logger_success "No errors were reported   ${GREEN}[ ✓ ]${NC}"
 }
 main
