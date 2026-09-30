@@ -154,9 +154,7 @@ main() {
 	project_version=$(basename "$(curl -s -o /dev/null -w '%{redirect_url}' "https://github.com/${project_name}/releases/latest")")
 
 	echo -e "${BLUE}"
-	echo -e " --------------------"
-	echo -e " ----- Archutil -----"
-	echo -e " --------------------"
+	echo -e "    :::: Archutil Installer ::::"
 	echo -e "${NC}"
 
 	if [[ -z "${project_version}" ]]; then
