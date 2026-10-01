@@ -65,7 +65,7 @@ detect_install_dir() {
 			exit 1
 		fi
 	else
-		install_dir="$GOBIN"
+		install_dir="${GOBIN}"
 	fi
 }
 
