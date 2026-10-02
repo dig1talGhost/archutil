@@ -1,4 +1,4 @@
-## 󰣇rchutil
+## Archutil
 Simple TUI application to run linux utilities with style.
 
 > [!NOTE]
