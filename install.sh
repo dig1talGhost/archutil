@@ -138,7 +138,7 @@ packages=(
 )
 
 for depends in "${packages[@]}"; do
-	if ! command -v "${depends}"; then
+	if ! command -v "${depends}" >/dev/null 2>&1; then
 		logger_error "Missing dependency: ${depends}"
 		exit 1
 	fi
