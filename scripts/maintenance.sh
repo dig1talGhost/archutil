@@ -1,9 +1,37 @@
 #!/usr/bin/env bash
+set -e
 
-# Make sure to run this script from project's root.
+###########################
+##### mod-maintenance #####
+###########################
+
+# Script to do general maintenance on a go module.
+# Make sure to run this script from project's root
+
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+logger_info() {
+	echo -e "${BLUE}[INFO]${NC} $1" >&2
+}
+
+logger_success() {
+	echo -e "${GREEN}[SUCCESS]${NC} $1" >&2
+}
+
+logger_error() {
+	echo -e "${RED}[ERR]${NC} $1" >&2
+}
+
+validate_license() {
+	logger_info "Validating LICENSE..."
+
+}
 
 function check_license() {
-	echo ":: Validating LICENSE..."
+	logger_info "Validating LICENSE..."
 
 	if ! command -v "go-licenses" >/dev/null 2>&1; then
 		go install github.com/google/go-licenses/v2@latest
@@ -11,17 +39,17 @@ function check_license() {
 
 	go-licenses check ./... \
 		--disallowed_types=forbidden,restricted \
-		--ignore=golang.org/x/sys && echo ":: Done."
+		--ignore=golang.org/x/sys && logger_success "Done."
 	echo ""
 }
 
 if [[ ! -f "./go.mod" ]]; then
-	echo ":: Not a Go module directory, exiting..."
+	logger_error ":: Not a Go module directory, exiting..."
 	exit 1
 fi
 
 if ! command -v "go" >/dev/null 2>&1; then
-	echo ":: command not found: go"
+	logger_error "command not found: go"
 	exit 1
 fi
 
@@ -29,15 +57,15 @@ if [[ -f "./LICENSE" ]]; then
 	check_license
 fi
 
-echo ":: Updating module dependencies..."
+logger_info "Updating module dependencies..."
 
 go get -u ./...
 go mod tidy
 
-echo ":: Done."
+logger_success "Done."
 echo ""
 
-echo ":: Running gofmt..."
+logger_info "Running gofmt..."
 gofmt -w -e .
 
-echo ":: Done."
+logger_success "Done."
