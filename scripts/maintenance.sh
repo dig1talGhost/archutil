@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-###########################
-##### mod-maintenance #####
-###########################
+#######################
+##### maintenance #####
+#######################
 
 # Script to do general maintenance on a go module.
 # Make sure to run this script from project's root
