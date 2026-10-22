@@ -1,25 +1,22 @@
-name: Go Formatter
+name: Go Lint
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 jobs:
-  shell-format:
-    name: Check Shell Formatting
+  lint:
+    name: lint
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-        with:
-          persist-credentials: false
+        uses: actions/checkout@v4
 
-      - name: Setup Go
-        uses: actions/setup-go@v6
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          go-version: stable
+          go-version-file: go.mod
 
       - name: Install shfmt
         run: go install mvdan.cc/sh/v3/cmd/shfmt@v3.14.1
@@ -27,32 +24,8 @@ jobs:
       - name: Check shell formatting
         run: shfmt -d .
 
-  format:
-    name: Format Go Code
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Setup Go
-        uses: actions/setup-go@v6
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v8
         with:
-          go-version: stable
-
-      - name: Check Go formatting
-        run: |
-          unformatted="$(gofmt -l .)"
-           if [ -n "$unformatted" ]; then
-            echo "The following files need gofmt:"
-            echo "$unformatted"
-            exit 1
-           fi
-
-      - name: Commit formatting changes
-        uses: stefanzweifel/git-auto-commit-action@v6
-        with:
-          commit_message: "chore: format Go code"
+          version: v2.15.0
+          args: --timeout=5m
