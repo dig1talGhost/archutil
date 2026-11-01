@@ -2,6 +2,7 @@ package tui
 
 import (
 	"fmt"
+	"io"
 	"os"
 
 	"charm.land/huh/v2"
@@ -38,7 +39,6 @@ func Menu() {
 		)
 
 		err := form.Run()
-
 		if err != nil {
 			logger.Standard.Fatalf("Error running form: %v", err)
 		}
@@ -58,7 +58,9 @@ func Menu() {
 		}
 
 		fmt.Print("\nPress Enter to return to the menu...")
-		fmt.Scanln()
+		if _, err := fmt.Scanln(); err != nil && err != io.EOF {
+			logger.Standard.Printf("failed to read menu input: %v", err)
+		}
 
 		terminal.ClearScreen()
 	}
