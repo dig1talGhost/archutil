@@ -34,7 +34,7 @@ validate_license() {
 
 	go-licenses check ./... \
 		--disallowed_types=forbidden,restricted \
-		--ignore=golang.org/x/sys && logger_success "Done."
+		--ignore=golang.org/x/sys
 	echo ""
 }
 
