@@ -88,8 +88,9 @@ func Serve() {
 	mux.Handle("/", fs)
 
 	srv := &http.Server{
-		Addr:    ":8080",
-		Handler: mux,
+		Addr:              ":8080",
+		Handler:           mux,
+		ReadHeaderTimeout: 5 * time.Second,
 	}
 
 	quit := make(chan os.Signal, 1)
