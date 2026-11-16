@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"charm.land/huh/v2"
-	"charm.land/lipgloss/v2"
 	"github.com/dig1talGhost/archutil/getarch"
 	"github.com/dig1talGhost/archutil/ghosttp"
 	"github.com/dig1talGhost/archutil/glyphs"
@@ -53,7 +52,7 @@ func Menu() {
 		case "opt4":
 			password_generator.Gen()
 		case "exit":
-			lipgloss.Println(styles.CommonStyle.Render("\nExiting..."))
+			fmt.Println(styles.CommonStyle.Render("\nExiting..."))
 			os.Exit(0)
 		}
 

@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"math/big"
 
-	"charm.land/lipgloss/v2"
-
 	"github.com/dig1talGhost/archutil/internal/styles"
 	"github.com/dig1talGhost/archutil/internal/terminal"
 )
@@ -34,7 +32,7 @@ func Gen() {
 
 	if err != nil {
 		fmt.Println()
-		lipgloss.Println(styles.ErrorStyle.Render("Error:"), "Oops, something went wrong...")
+		fmt.Println(styles.ErrorStyle.Render("Error:"), "Oops, something went wrong...")
 		return
 	}
 
@@ -48,5 +46,5 @@ func Gen() {
 	terminal.ClearScreen()
 
 	fmt.Println()
-	lipgloss.Println(styles.LegendStyleBold.Render("Password:"), styles.CommonStyle.Render(string(password)))
+	fmt.Println(styles.LegendStyleBold.Render("Password:"), styles.CommonStyle.Render(string(password)))
 }

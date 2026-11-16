@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"charm.land/huh/v2"
-	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
 	"github.com/dig1talGhost/archutil/internal/logger"
 	"github.com/dig1talGhost/archutil/internal/styles"
@@ -30,7 +29,7 @@ func makeServeTree(path string) {
 			tree.New().
 				Root(styles.HttpChildStyle.Render(path)),
 		)
-	lipgloss.Println(t)
+	fmt.Println(t)
 }
 
 func makeAddrTree() {
@@ -40,7 +39,7 @@ func makeAddrTree() {
 			tree.New().
 				Root(styles.HttpChildStyle.Render(serviceAddrUrl)),
 		)
-	lipgloss.Println(t)
+	fmt.Println(t)
 }
 
 func getWebsitePath() (string, error) {
@@ -104,7 +103,7 @@ func Serve() {
 		makeAddrTree()
 		fmt.Println()
 
-		lipgloss.Println(styles.LegendStyle.Render("[CTRL + C to stop server]"))
+		fmt.Println(styles.LegendStyle.Render("[CTRL + C to stop server]"))
 
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			logger.TimeStamped.Fatal(":: Listen / Serve error...")
