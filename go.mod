@@ -3,7 +3,7 @@ module github.com/dig1talGhost/archutil
 go 1.27.0
 
 require (
-	charm.land/bubbles/v2 v2.2.1
+	charm.land/bubbles/v2 v2.2.2
 	charm.land/bubbletea/v2 v2.1.2
 	charm.land/huh/v2 v2.0.3
 	charm.land/lipgloss/v2 v2.1.1
@@ -11,7 +11,7 @@ require (
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/charmbracelet/log v1.0.0
 	github.com/muesli/termenv v0.16.0
-	github.com/rivo/uniseg v0.4.7
+	github.com/rivo/uniseg v0.4.8-0.20261110175422-3a370411ca06
 )
 
 require (
