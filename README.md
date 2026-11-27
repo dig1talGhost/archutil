@@ -85,12 +85,12 @@ You can modify the number of characters in `password_generator/password_generato
 ```go
 func Gen() {
 
-  // Define the number of characters (passwordLength)
-  passwordLength := 16
-  password, err := generatePassword(passwordLength, defaultChars)
+	passwordLength := 16
+	password, err := generatePassword(passwordLength, defaultChars)
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "Failed to generate password:", err)
+		fmt.Println()
+		fmt.Println(styles.ErrorStyle.Render("Error:"), "Oops, something went wrong...")
 		return
 	}
 
@@ -101,6 +101,9 @@ func Gen() {
 		}
 	}()
 
-	lipgloss.Println(simpleStyle.Render(string(password)))
+	terminal.ClearScreen()
+
+	fmt.Println()
+	fmt.Println(styles.LegendStyleBold.Render("Password:"), styles.CommonStyle.Render(string(password)))
 }
 ```
