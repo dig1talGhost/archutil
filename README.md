@@ -80,30 +80,3 @@ Generate a random 16 characters password by default using the following characte
 ```go
 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()
 ```
-
-You can modify the number of characters in `password_generator/password_generator.go`:
-```go
-func Gen() {
-
-	passwordLength := 16
-	password, err := generatePassword(passwordLength, defaultChars)
-
-	if err != nil {
-		fmt.Println()
-		fmt.Println(styles.ErrorStyle.Render("Error:"), "Oops, something went wrong...")
-		return
-	}
-
-	defer func() {
-
-		for i := range password {
-			password[i] = 0
-		}
-	}()
-
-	terminal.ClearScreen()
-
-	fmt.Println()
-	fmt.Println(styles.LegendStyleBold.Render("Password:"), styles.CommonStyle.Render(string(password)))
-}
-```
